@@ -2,7 +2,7 @@ go
 use AgroYield_DB;
 go
 
--- Crop Productivity Summary Report
+-- Crop Productivity Summary Report:
 -- Overall crop performance (area, production, yield) across India to identify high-output crops
 -- Coconut and Sugarcane have the highest production, but Maize shows superior yield efficiency with moderate fertilizer use.
 SELECT 
@@ -17,7 +17,7 @@ GROUP BY Crop
 ORDER BY Avg_Yield DESC;
 
 
--- State-wise Agricultural Performance Report
+-- State-wise Agricultural Performance Report:
 -- To compare states based on production, yield, and resource utilization efficiency.
 -- Delhi and Pundicherry show the highest yield per hectare, driven by optimal fertilizer use and effective irrigation strategies.
 SELECT 
@@ -31,7 +31,7 @@ FROM Crop_Yield
 GROUP BY State
 ORDER BY Avg_Yield DESC;
 
--- Seasonal Crop Yield & Weather Impact Report
+-- Seasonal Crop Yield & Weather Impact Report:
 -- To analyze how different seasons and rainfall patterns affect crop yield.
 -- The Winter season yields the highest output due to favorable rainfall, while Rabi season is more fertilizer-dependent.
 SELECT 
@@ -43,7 +43,7 @@ FROM Crop_Yield
 GROUP BY Season
 ORDER BY Avg_Yield DESC;
 
--- Resource Efficiency Report
+-- Resource Efficiency Report:
 -- To evaluate how effectively fertilizer and pesticide resources contribute to production and yield outcomes.
 -- States with balanced pesticide and fertilizer use (like Madhya Pradesh) show better efficiency ratios compared to overuse regions.
 SELECT 
@@ -56,7 +56,7 @@ FROM Crop_Yield
 GROUP BY State
 ORDER BY Production_Per_Fertilizer DESC;
 
--- Year-over-Year Crop Yield Growth Report
+-- Year-over-Year Crop Yield Growth Report:
 -- To track performance trends of average yield over years.
 -- Average crop yield shows consistent growth from 2018 to 2022 due to improved irrigation and data-driven farming practices.
 SELECT 
@@ -70,6 +70,7 @@ SELECT
 FROM Crop_Yield
 GROUP BY Crop_Year
 ORDER BY Crop_Year;
+
 
 
 
